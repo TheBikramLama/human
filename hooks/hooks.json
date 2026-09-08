@@ -1,0 +1,16 @@
+{
+  "description": "Reminds Claude to append a TL;DR block to long replies (the human:tldr skill).",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'If your reply runs past ~12 lines or ~150 words and is not mostly code, files or a table, invoke the human:tldr skill and end the reply with its TL;DR block.'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

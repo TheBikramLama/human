@@ -1,7 +1,7 @@
 {
   "name": "human",
   "description": "Make things readable by, and actionable for, a human. Plain-language TL;DRs, explanations of concepts, code, diffs, contracts, meetings and errors, tickets turned into checklists, and a pass that strips AI tells from writing.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Bikram Lama"
   },
