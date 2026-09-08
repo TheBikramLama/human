@@ -8,11 +8,48 @@ Every skill passes its output through `unslop` before sending. Every skill takes
 
 ## Install
 
+The skills are plain `SKILL.md` files in `skills/`, so they work in any agent that reads the Agent Skills format. Pick the route for your tool.
+
+### Claude Code
+
+Add this repo as a marketplace, then install the plugin:
+
+```
+/plugin marketplace add TheBikramLama/human
+/plugin install human@human
+```
+
+Skills are then `/human:<skill>`, for example `/human:tldr`.
+
+To try it from a local checkout without installing:
+
 ```sh
 claude --plugin-dir /path/to/human
 ```
 
-Then use `/human:<skill>` inside Claude Code.
+### Codex, OpenCode, Cursor, Copilot, Cline, Windsurf and others
+
+One command, works for most agents. It detects which agents you have and asks where to put the skills:
+
+```sh
+npx skills add TheBikramLama/human
+```
+
+Useful flags: `-g` installs for you rather than for one project, `-a codex` (or `cursor`, `opencode`, `github-copilot`, and so on) targets one agent, `--all -y` installs everything everywhere without asking.
+
+Or copy by hand. Each folder under `skills/` goes into the agent's skills folder:
+
+| Agent | Project folder | Personal folder |
+|---|---|---|
+| Codex | `.agents/skills/` | `~/.codex/skills/` |
+| OpenCode | `.agents/skills/` | `~/.config/opencode/skills/` |
+| Cursor | `.agents/skills/` | `~/.cursor/skills/` |
+| GitHub Copilot | `.agents/skills/` | `~/.copilot/skills/` |
+| Cline | `.agents/skills/` | `~/.agents/skills/` |
+| Windsurf | `.windsurf/skills/` | `~/.codeium/windsurf/skills/` |
+| Claude Code, without the plugin | `.claude/skills/` | `~/.claude/skills/` |
+
+Outside Claude Code there is no `human:` prefix. Skills are called by their bare name, `tldr`, `unslop` and so on, in whatever way your tool invokes a skill (`$tldr` in Codex, for example). Each skill's final step calls `unslop`; the skills say so and fall back gracefully if the tool cannot load one skill from another.
 
 ## Skills
 
@@ -32,12 +69,14 @@ Source for any skill: pasted text, a file path, a web address, or nothing to use
 
 ## Examples
 
-**tldr.** Long replies end with a block like this, added automatically:
+**tldr.** Long replies end with a block like this, added automatically. Shown here as raw text; in the terminal it renders as a quote bar with the sentences set apart in a box.
 
+````
 > **TL;DR**
 > ```
 The question export was deleted and no copy exists. Re-run it before the reply promising a spreadsheet goes out.
 ```
+````
 
 **unslop.**
 
