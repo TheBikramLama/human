@@ -40,7 +40,7 @@ Line by line. The ` character is the backtick, the key to the left of 1 on most 
 3. The sentences. No greater-than sign.
 4. Three backticks on their own. No greater-than sign.
 
-Plain text only between the backtick lines. No bullets, no bold, no links, no words wrapped in backticks. Formatting marks show up as raw symbols there, so do not use them. Leave a blank line before the block. Put nothing after it.
+Plain text only between the backtick lines. No bullets, no bold, no links, no words wrapped in backticks. Formatting marks show up as raw symbols there, so do not use them. Leave a blank line before the block. Put nothing after it: no sources, no links, no sign-off, no footnote. Anything like that goes above the block. Text after the closing backticks breaks how the block is drawn.
 
 ## Content
 
