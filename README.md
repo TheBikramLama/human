@@ -12,10 +12,15 @@ The skills are plain `SKILL.md` files in `skills/`, so they work in any agent th
 
 ### Claude Code
 
-Add this repo as a marketplace, then install the plugin:
+Two commands inside Claude Code, one at a time. First add this repo as a marketplace:
 
 ```
 /plugin marketplace add TheBikramLama/human
+```
+
+Then install the plugin:
+
+```
 /plugin install human@human
 ```
 
