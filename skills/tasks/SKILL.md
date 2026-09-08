@@ -67,7 +67,7 @@ A numbered list. Each a real question, addressed to whoever can answer it if tha
 The breakdown must go through the unslop skill before it is sent. This means calling the skill, not remembering its rules.
 
 1. Draft the full breakdown.
-2. Call the skill `human:unslop` with the Skill tool. Pass the draft as the argument.
+2. Call the skill `human:unslop` with the Skill tool. In a tool that has no plugin prefix, the skill is just called `unslop`; load it the way that tool loads a skill. Pass the draft as the argument.
 3. Send the returned text. Do not edit it afterwards except to fix a fact or a tick box it broke.
 
 Never skip this step. Never replace the call with your own memory of the rules. If the Skill tool is not available, say so at the top, then send the draft.

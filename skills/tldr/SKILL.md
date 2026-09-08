@@ -57,7 +57,7 @@ Plain text only between the backtick lines. No bullets, no bold, no links, no wo
 The TL;DR text must go through the unslop skill before it is sent. This means calling the skill, not remembering its rules.
 
 1. Draft the TL;DR sentences.
-2. Call the skill `human:unslop` with the Skill tool. Pass the draft sentences as the argument.
+2. Call the skill `human:unslop` with the Skill tool. In a tool that has no plugin prefix, the skill is just called `unslop`; load it the way that tool loads a skill. Pass the draft sentences as the argument.
 3. Put the returned text between the backtick lines. Do not edit it afterwards except to fix a fact it broke.
 
 Never skip this step. Never replace the call with your own memory of the rules. If the Skill tool is not available, say so in the reply above the block, then send the draft.

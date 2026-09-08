@@ -1,0 +1,16 @@
+{
+  "name": "human",
+  "description": "Skills that make things readable by, and actionable for, a human.",
+  "owner": {
+    "name": "Bikram Lama"
+  },
+  "plugins": [
+    {
+      "name": "human",
+      "source": "./",
+      "description": "Plain-language TL;DRs, explanations of concepts, code, diffs, contracts, meetings and errors, tickets turned into checklists, and a pass that strips AI tells from writing.",
+      "version": "0.1.0",
+      "category": "productivity"
+    }
+  ]
+}

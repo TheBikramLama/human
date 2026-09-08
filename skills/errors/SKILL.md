@@ -61,7 +61,7 @@ If there is a quick workaround that is not the fix, you may add it in one line, 
 The explanation must go through the unslop skill before it is sent. This means calling the skill, not remembering its rules.
 
 1. Draft the full explanation.
-2. Call the skill `human:unslop` with the Skill tool. Pass the draft as the argument.
+2. Call the skill `human:unslop` with the Skill tool. In a tool that has no plugin prefix, the skill is just called `unslop`; load it the way that tool loads a skill. Pass the draft as the argument.
 3. Send the returned text. Do not edit it afterwards except to fix a fact, a path or a line of code it broke.
 
 Never skip this step. Never replace the call with your own memory of the rules. If the Skill tool is not available, say so at the top, then send the draft.
