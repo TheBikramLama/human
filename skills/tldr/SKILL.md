@@ -28,12 +28,14 @@ In this order: the reply you are about to send, text the user pasted, a file the
 
 Locked. Four lines, exactly this:
 
+````text
 > **TL;DR**
 > ```
 Two or three plain sentences. No formatting marks inside.
 ```
+````
 
-Line by line. The ` character is the backtick, the key to the left of 1 on most keyboards.
+Line by line. The `` ` `` character is the backtick, the key to the left of 1 on most keyboards.
 
 1. A greater-than sign, a space, then TL;DR wrapped in double asterisks so it shows bold.
 2. A greater-than sign, a space, then three backticks. This line starts with the greater-than sign too. Do not drop it.
