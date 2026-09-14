@@ -1,25 +1,13 @@
 {
-  "description": "Reminds Claude to append a TL;DR block to long replies, and checks the block is there and correctly formatted before the turn ends (the human:tldr skill).",
+  "description": "Reminds Claude to end a long reply with the human:tldr block, in the skill's locked format.",
   "hooks": {
     "SessionStart": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'When a reply runs past ~12 lines or ~150 words and is not mostly code, files or a table, invoke the human:tldr skill and end that reply with its TL;DR block, in the locked format the skill defines. Applies for the whole session.'",
+            "command": "printf %s 'When a reply runs past ~12 lines or ~150 words and is not mostly code, files or a table, end it with the human:tldr block, copied exactly, as the last thing in the reply:\n\n> **TL;DR**\n> ```\n> Two or three plain sentences, under 50 words, no formatting marks inside.\n> ```\n\nAll four lines start with a greater-than sign and a space. Applies for the whole session.\n'",
             "timeout": 5
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/tldr_stop.py",
-            "args": [],
-            "timeout": 10
           }
         ]
       }

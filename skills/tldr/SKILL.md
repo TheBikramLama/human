@@ -31,18 +31,22 @@ Locked. Four lines, exactly this:
 ````text
 > **TL;DR**
 > ```
-Two or three plain sentences. No formatting marks inside.
-```
+> Two or three plain sentences. No formatting marks inside.
+> ```
 ````
 
 Line by line. The `` ` `` character is the backtick, the key to the left of 1 on most keyboards.
 
 1. A greater-than sign, a space, then TL;DR wrapped in double asterisks so it shows bold.
-2. A greater-than sign, a space, then three backticks. This line starts with the greater-than sign too. Do not drop it.
-3. The sentences. No greater-than sign.
-4. Three backticks on their own. No greater-than sign.
+2. A greater-than sign, a space, then three backticks.
+3. A greater-than sign, a space, then the sentences.
+4. A greater-than sign, a space, then three backticks.
 
-Plain text only between the backtick lines. No bullets, no bold, no links, no words wrapped in backticks. Formatting marks show up as raw symbols there, so do not use them. Leave a blank line before the block. Put nothing after it: no sources, no links, no sign-off, no footnote. Anything like that goes above the block. Text after the closing backticks breaks how the block is drawn.
+Every one of the four lines starts with a greater-than sign and a space. Drop it from
+any of them and the block falls apart: the sentences land outside the quote and the
+last line opens a code block that swallows the rest of the message.
+
+Plain text only between the backtick lines. No bullets, no bold, no links, no words wrapped in backticks. Formatting marks show up as raw symbols there, so do not use them. Leave a blank line before the block. Put nothing after it: no sources, no links, no sign-off, no footnote. Anything like that goes above the block.
 
 ## Content
 
